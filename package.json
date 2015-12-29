@@ -1,0 +1,44 @@
+{
+  "name": "stream-to-blob-url",
+  "description": "Convert a Readable Stream to a Blob URL",
+  "version": "0.0.0",
+  "author": {
+    "name": "Feross Aboukhadijeh",
+    "email": "feross@feross.org",
+    "url": "http://feross.org/"
+  },
+  "bugs": {
+    "url": "https://github.com/feross/stream-to-blob-url/issues"
+  },
+  "dependencies": {
+    "stream-with-known-length-to-buffer": "^1.0.0"
+  },
+  "devDependencies": {
+    "standard": "^5.0.0",
+    "string-to-stream": "^1.0.1",
+    "tape": "^4.0.0",
+    "xhr": "^2.2.0",
+    "zuul": "^3.0.0"
+  },
+  "homepage": "https://github.com/feross/stream-to-blob-url",
+  "keywords": [
+    "stream",
+    "buffer",
+    "convert stream to blob url",
+    "blob url",
+    "convert",
+    "length",
+    "name"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/feross/stream-to-blob-url.git"
+  },
+  "scripts": {
+    "test": "standard && npm run test-browser",
+    "test-browser": "zuul -- test/*.js",
+    "test-browser-local": "zuul --local -- test/*.js"
+  }
+}
