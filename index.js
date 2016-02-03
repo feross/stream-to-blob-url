@@ -1,12 +1,18 @@
 /* global Blob, URL */
 
-var streamToBuffer = require('stream-with-known-length-to-buffer')
+var once = require('once')
 
-module.exports = function getBlobURL (stream, length, mimeType, cb) {
-  streamToBuffer(stream, length, function (err, buf) {
-    if (err) return cb(err)
-    var blob = mimeType ? new Blob([ buf ], { type: mimeType }) : new Blob([ buf ])
-    var url = URL.createObjectURL(blob)
-    cb(null, url)
-  })
+module.exports = function getBlobURL (stream, mimeType, cb) {
+  cb = once(cb)
+  var chunks = []
+  stream
+    .on('data', function (chunk) {
+      chunks.push(chunk)
+    })
+    .on('end', function () {
+      var blob = mimeType ? new Blob(chunks, { type: mimeType }) : new Blob(chunks)
+      var url = URL.createObjectURL(blob)
+      cb(null, url)
+    })
+    .on('error', cb)
 }
