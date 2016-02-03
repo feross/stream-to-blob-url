@@ -32,9 +32,9 @@ toBlobURL(fs.createReadStream('file.txt'), 1000, 'file.txt', function (err, url)
 
 MIT. Copyright (c) [Feross Aboukhadijeh](http://feross.org).
 
-[travis-image]: https://img.shields.io/travis/feross/stream-to-blob-url.svg?style=flat
+[travis-image]: https://img.shields.io/travis/feross/stream-to-blob-url/master.svg
 [travis-url]: https://travis-ci.org/feross/stream-to-blob-url
-[npm-image]: https://img.shields.io/npm/v/stream-to-blob-url.svg?style=flat
+[npm-image]: https://img.shields.io/npm/v/stream-to-blob-url.svg
 [npm-url]: https://npmjs.org/package/stream-to-blob-url
-[downloads-image]: https://img.shields.io/npm/dm/stream-to-blob-url.svg?style=flat
+[downloads-image]: https://img.shields.io/npm/dm/stream-to-blob-url.svg
 [downloads-url]: https://npmjs.org/package/stream-to-blob-url
