@@ -19,7 +19,7 @@ npm install stream-to-blob-url
 ```js
 var toBlobURL = require('stream-to-blob-url')
 
-toBlobURL(fs.createReadStream('file.txt'), 'file.txt', function (err, url) {
+toBlobURL(fs.createReadStream('file.txt'), 'text/plain', function (err, url) {
   if (err) return console.error(err.message)
   console.log(url)
 })
