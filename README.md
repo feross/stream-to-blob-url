@@ -8,24 +8,34 @@ This package converts a Readable Stream into a Blob URL.
 
 This package is used by [WebTorrent](https://webtorrent.io).
 
-### install
+## install
 
 ```
 npm install stream-to-blob-url
 ```
 
-### usage
+## usage
 
 ```js
 var toBlobURL = require('stream-to-blob-url')
 
-toBlobURL(fs.createReadStream('file.txt'), 'text/plain', function (err, url) {
+toBlobURL(fs.createReadStream('file.txt'), function (err, url) {
   if (err) return console.error(err.message)
   console.log(url)
 })
 ```
 
-### license
+## api
+
+### toBlobURL(stream, [mimeType], callback)
+
+Convert the Readable `stream` into a W3C `Blob` URL, optionally, with the given
+`mimeType`. The `callback` will be called with two arguments:
+
+- An `Error` object, or `null`
+- A `string` blob url (`blob:...`)
+
+## license
 
 MIT. Copyright (c) [Feross Aboukhadijeh](http://feross.org).
 

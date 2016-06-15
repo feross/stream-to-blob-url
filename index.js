@@ -1,18 +1,12 @@
-/* global Blob, URL */
+/* global URL */
 
-var once = require('once')
+var getBlob = require('stream-to-blob')
 
 module.exports = function getBlobURL (stream, mimeType, cb) {
-  cb = once(cb)
-  var chunks = []
-  stream
-    .on('data', function (chunk) {
-      chunks.push(chunk)
-    })
-    .on('end', function () {
-      var blob = mimeType ? new Blob(chunks, { type: mimeType }) : new Blob(chunks)
-      var url = URL.createObjectURL(blob)
-      cb(null, url)
-    })
-    .on('error', cb)
+  if (typeof mimeType === 'function') return getBlobURL(stream, null, mimeType)
+  getBlob(stream, mimeType, function (err, blob) {
+    if (err) return cb(err)
+    var url = URL.createObjectURL(blob)
+    cb(null, url)
+  })
 }
