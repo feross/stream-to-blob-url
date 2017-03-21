@@ -1,4 +1,13 @@
-# stream-to-blob-url [![Build Status][travis-image]][travis-url] [![NPM Version][npm-image]][npm-url] [![NPM Downloads][downloads-image]][downloads-url]
+# stream-to-blob-url [![travis][travis-image]][travis-url] [![npm][npm-image]][npm-url] [![downloads][downloads-image]][downloads-url] [![javascript style guide][standard-image]][standard-url]
+
+[travis-image]: https://img.shields.io/travis/feross/stream-to-blob-url/master.svg
+[travis-url]: https://travis-ci.org/feross/stream-to-blob-url
+[npm-image]: https://img.shields.io/npm/v/stream-to-blob-url.svg
+[npm-url]: https://npmjs.org/package/stream-to-blob-url
+[downloads-image]: https://img.shields.io/npm/dm/stream-to-blob-url.svg
+[downloads-url]: https://npmjs.org/package/stream-to-blob-url
+[standard-image]: https://img.shields.io/badge/code_style-standard-brightgreen.svg
+[standard-url]: https://standardjs.com
 
 #### Convert a Readable Stream to a Blob URL
 
@@ -38,10 +47,3 @@ Convert the Readable `stream` into a W3C `Blob` URL, optionally, with the given
 ## license
 
 MIT. Copyright (c) [Feross Aboukhadijeh](http://feross.org).
-
-[travis-image]: https://img.shields.io/travis/feross/stream-to-blob-url/master.svg
-[travis-url]: https://travis-ci.org/feross/stream-to-blob-url
-[npm-image]: https://img.shields.io/npm/v/stream-to-blob-url.svg
-[npm-url]: https://npmjs.org/package/stream-to-blob-url
-[downloads-image]: https://img.shields.io/npm/dm/stream-to-blob-url.svg
-[downloads-url]: https://npmjs.org/package/stream-to-blob-url
