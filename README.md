@@ -1,5 +1,7 @@
 # stream-to-blob-url [![travis][travis-image]][travis-url] [![npm][npm-image]][npm-url] [![downloads][downloads-image]][downloads-url] [![javascript style guide][standard-image]][standard-url]
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/feross/stream-to-blob-url.svg)](https://greenkeeper.io/)
+
 [travis-image]: https://img.shields.io/travis/feross/stream-to-blob-url/master.svg
 [travis-url]: https://travis-ci.org/feross/stream-to-blob-url
 [npm-image]: https://img.shields.io/npm/v/stream-to-blob-url.svg
