@@ -1,5 +1,3 @@
-/* global URL */
-
 var getBlob = require('stream-to-blob')
 
 module.exports = function getBlobURL (stream, mimeType, cb) {
