@@ -46,4 +46,4 @@ Convert the Readable `stream` into a W3C `Blob` URL, optionally, with the given
 
 ## license
 
-MIT. Copyright (c) [Feross Aboukhadijeh](http://feross.org).
+MIT. Copyright (c) [Feross Aboukhadijeh](https://feross.org).
