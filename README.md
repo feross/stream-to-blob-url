@@ -26,23 +26,22 @@ npm install stream-to-blob-url
 ## usage
 
 ```js
-var toBlobURL = require('stream-to-blob-url')
+const toBlobURL = require('stream-to-blob-url')
+const fs = require('fs')
 
-toBlobURL(fs.createReadStream('file.txt'), function (err, url) {
-  if (err) return console.error(err.message)
-  console.log(url)
-})
+const blobUrl = await toBlobURL(fs.createReadStream('file.txt'))
+console.log(url)
 ```
 
 ## api
 
-### toBlobURL(stream, [mimeType], callback)
+### promise = toBlobURL(stream, [mimeType], callback)
 
-Convert the Readable `stream` into a W3C `Blob` URL, optionally, with the given
-`mimeType`. The `callback` will be called with two arguments:
+Convert the Readable `stream` into a W3C `Blob` URL (`blob:...`), optionally,
+with the given `mimeType`.
 
-- An `Error` object, or `null`
-- A `string` blob url (`blob:...`)
+Returns a `Promise` which resolves to a `string` on success. Otherwise, rejects
+with an `Error`.
 
 ## license
 

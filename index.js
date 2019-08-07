@@ -1,10 +1,9 @@
-var getBlob = require('stream-to-blob')
+module.exports = getBlobURL
 
-module.exports = function getBlobURL (stream, mimeType, cb) {
-  if (typeof mimeType === 'function') return getBlobURL(stream, null, mimeType)
-  getBlob(stream, mimeType, function (err, blob) {
-    if (err) return cb(err)
-    var url = URL.createObjectURL(blob)
-    cb(null, url)
-  })
+const getBlob = require('stream-to-blob')
+
+async function getBlobURL (stream, mimeType) {
+  const blob = await getBlob(stream, mimeType)
+  const url = URL.createObjectURL(blob)
+  return url
 }
