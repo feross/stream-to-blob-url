@@ -14,7 +14,7 @@
     "stream-to-blob": "^2.0.0"
   },
   "devDependencies": {
-    "airtap": "^2.0.3",
+    "airtap": "^3.0.0",
     "standard": "*",
     "string-to-stream": "^3.0.0",
     "tape": "^5.0.0"
